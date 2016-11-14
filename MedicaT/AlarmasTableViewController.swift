@@ -26,7 +26,7 @@ class AlarmasTableViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         
         tableView.tableFooterView?.backgroundColor = UIColor.red
-       
+       var YOLO = ""
        
     }
 
