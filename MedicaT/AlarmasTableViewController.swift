@@ -11,7 +11,7 @@ import CoreData
 
 class AlarmasTableViewController: UITableViewController {
 
-     var alarmas : [NSManagedObject]?
+     var alarmas : [NSManagedObject]!
    
     
     override func viewDidLoad() {
@@ -26,8 +26,6 @@ class AlarmasTableViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         
         tableView.tableFooterView?.backgroundColor = UIColor.red
-        var YOLO = ""
-       
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,13 +49,15 @@ class AlarmasTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "alarmaCell", for: indexPath)
         let alarma = alarmas![indexPath.row]
-        let nombre = (alarma.value(forKey: "nombre") as! String)
-        let presentacion = (alarma.value(forKey: "presentacion") as! String)
-        let frecuencia = (alarma.value(forKey: "frecuencia") as! String )
         
-        cell.textLabel?.text = nombre
-        cell.detailTextLabel?.text = presentacion
-        cell.detailTextLabel?.text = frecuencia
+        let presentacion = alarma.value(forKey: "presentacion") as! String
+        let fecha = alarma.value(forKey: "fecha") as! Date
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy H:mm a"
+        
+        cell.textLabel?.text = alarma.value(forKey: "nombre") as! String?
+        cell.detailTextLabel?.text = "Inicio: \(dateFormatter.string(from: fecha))"
         
         if presentacion == "Cápsulas" || presentacion == "Pastillas" || presentacion == "Tabletas" {
             cell.imageView?.image = UIImage(named: "pildora")
@@ -87,6 +87,7 @@ class AlarmasTableViewController: UITableViewController {
         let managedContext = appDelegate.persistentContainer.viewContext
         
         let fetchRequest : NSFetchRequest<Alarmas> = Alarmas.fetchRequest()
+        fetchRequest.returnsObjectsAsFaults = false
         
         do {
             let results = try managedContext.fetch(fetchRequest)
@@ -97,6 +98,7 @@ class AlarmasTableViewController: UITableViewController {
         
         tableView.reloadData()
     }
+    
     func deleteMedicamento(alarma: NSManagedObject) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -172,7 +174,7 @@ class AlarmasTableViewController: UITableViewController {
         }
     }
     
-     func unwindAlarmas(segue: UIStoryboardSegue) {
+     @IBAction func unwindAlarmas(segue: UIStoryboardSegue) {
         getTableData()
     }
 

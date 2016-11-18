@@ -22,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E911B4361DDE47A0008ECF06 /* MedicaT 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MedicaT 2.xcdatamodel"; sourceTree = "<group>"; };
 		E912A9081DCA74AC007A9E0D /* MedicamentosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentosTableViewController.swift; sourceTree = "<group>"; };
 		E912A9101DCA779B007A9E0D /* MedicamentosPlistManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentosPlistManager.swift; sourceTree = "<group>"; };
 		E912A9141DCA8273007A9E0D /* RegistrarMedicamentoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrarMedicamentoTableViewController.swift; sourceTree = "<group>"; };
@@ -357,6 +358,7 @@
 		E95701281DB80C730051ACED /* MedicaT.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				E911B4361DDE47A0008ECF06 /* MedicaT 2.xcdatamodel */,
 				E95701291DB80C730051ACED /* MedicaT.xcdatamodel */,
 			);
 			currentVersion = E95701291DB80C730051ACED /* MedicaT.xcdatamodel */;

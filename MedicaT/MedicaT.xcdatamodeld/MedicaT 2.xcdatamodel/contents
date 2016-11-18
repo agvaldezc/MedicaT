@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Alarmas" representedClassName="Alarmas" syncable="YES" codeGenerationType="class">
+    <entity name="Alarmas" representedClassName=".Alarmas" syncable="YES" codeGenerationType="class">
         <attribute name="fecha" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="frecuencia" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frecuencia" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="presentacion" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="medicamento" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Medicamento" syncable="YES"/>
     </entity>
     <entity name="Medicamento" representedClassName="Medicamento" syncable="YES" codeGenerationType="class">
         <attribute name="medida" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -13,7 +14,7 @@
         <attribute name="presentacion" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Alarmas" positionX="-279" positionY="72" width="128" height="105"/>
-        <element name="Medicamento" positionX="-81" positionY="68" width="128" height="105"/>
+        <element name="Alarmas" positionX="-279" positionY="72" width="128" height="120"/>
+        <element name="Medicamento" positionX="-81" positionY="68" width="128" height="103"/>
     </elements>
 </model>
