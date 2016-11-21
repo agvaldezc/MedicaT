@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Alarmas" representedClassName="Alarmas" syncable="YES" codeGenerationType="class">
+        <attribute name="alertasMostradas" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="alertasTotales" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="dosis" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="duracion" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="fecha" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="frecuencia" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="presentacion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="siguienteAlerta" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="Historial" representedClassName="Historial" syncable="YES" codeGenerationType="class">
+        <attribute name="fecha" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="medicamento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tomada" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="Medicamento" representedClassName="Medicamento" syncable="YES" codeGenerationType="class">
         <attribute name="medida" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -16,7 +25,8 @@
         <attribute name="tipoMedida" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Alarmas" positionX="-279" positionY="72" width="128" height="135"/>
+        <element name="Alarmas" positionX="-279" positionY="72" width="128" height="195"/>
         <element name="Medicamento" positionX="-81" positionY="68" width="128" height="120"/>
+        <element name="Historial" positionX="-180" positionY="135" width="128" height="90"/>
     </elements>
 </model>

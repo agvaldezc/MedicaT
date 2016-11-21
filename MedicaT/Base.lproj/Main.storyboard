@@ -127,7 +127,8 @@
                     <connections>
                         <segue destination="EcA-zW-bVx" kind="relationship" relationship="viewControllers" id="ZBF-RY-F6J"/>
                         <segue destination="Gii-rf-t8W" kind="relationship" relationship="viewControllers" id="C26-KV-hED"/>
-                        <segue destination="rxe-jK-PVb" kind="relationship" relationship="viewControllers" id="3wC-Rx-EIv"/>
+                        <segue destination="rxe-jK-PVb" kind="relationship" relationship="viewControllers" id="4ys-yV-4tK"/>
+                        <segue destination="W0w-CI-BHK" kind="relationship" relationship="viewControllers" id="cGW-tT-hyq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Mk-XS-aqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,7 +190,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Igx-jk-jUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="186" y="508"/>
+            <point key="canvasLocation" x="185" y="584"/>
         </scene>
         <!--Registrar Medicamento Table View Controller-->
         <scene sceneID="1Gi-zf-hl4">
@@ -429,7 +430,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Psn-ce-IW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5ro-Q6-UbX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="917.60000000000002" y="507.79610194902551"/>
+            <point key="canvasLocation" x="918" y="584"/>
         </scene>
         <!--Mis Medicamentos-->
         <scene sceneID="kAT-Gb-g9z">
@@ -448,7 +449,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k32-dp-wv5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-618" y="509"/>
+            <point key="canvasLocation" x="-618" y="585"/>
         </scene>
         <!--Informacion Personal Table View Controller-->
         <scene sceneID="WrA-o1-Cvi">
@@ -727,7 +728,7 @@
             </objects>
             <point key="canvasLocation" x="174" y="1276"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Historial-->
         <scene sceneID="78i-D8-w3w">
             <objects>
                 <tableViewController id="m1V-J6-fgF" sceneMemberID="viewController">
@@ -750,17 +751,64 @@
                             <outlet property="delegate" destination="m1V-J6-fgF" id="Zaf-xs-AbA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="4ia-hW-thL"/>
+                    <navigationItem key="navigationItem" title="Historial" id="4ia-hW-thL"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="niv-1S-N5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="185" y="2079"/>
+            <point key="canvasLocation" x="186" y="1989"/>
         </scene>
         <!--Configuración-->
+        <scene sceneID="QRl-27-rIK">
+            <objects>
+                <tableViewController id="jmN-OK-79a" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Nga-8H-rDr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="obL-BT-49P">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="obL-BT-49P" id="A8U-vn-NnI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jmN-OK-79a" id="NYE-Q6-7Dz"/>
+                            <outlet property="delegate" destination="jmN-OK-79a" id="Lb3-wL-uGX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Configuración" id="nVD-7i-re6"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LxH-Ve-rHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="185" y="2671"/>
+        </scene>
+        <!--Configuración-->
+        <scene sceneID="9fl-O7-4fO">
+            <objects>
+                <navigationController id="W0w-CI-BHK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Configuración" image="Settings" id="rVp-VU-NRh"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sue-Pl-NDY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.32888316899999998" green="0.62547971660000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jmN-OK-79a" kind="relationship" relationship="rootViewController" id="FRj-s5-Tgn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGy-uq-yPQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-628" y="2672"/>
+        </scene>
+        <!--Historial-->
         <scene sceneID="mqL-cK-GyQ">
             <objects>
                 <navigationController id="rxe-jK-PVb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Configuración" image="Settings" id="AP6-rk-3ve"/>
+                    <tabBarItem key="tabBarItem" title="Historial" image="Clock" id="AP6-rk-3ve"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="srf-Xy-UOk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -772,7 +820,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qb-rc-Qxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-620" y="2079"/>
+            <point key="canvasLocation" x="-618" y="1989"/>
         </scene>
         <!--Registrar Alarma Table View Controller-->
         <scene sceneID="mSW-VC-kML">
@@ -982,6 +1030,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Clock" width="25" height="25"/>
         <image name="Settings" width="25" height="25"/>
         <image name="inyeccion" width="25" height="25"/>
         <image name="no-picture" width="160" height="152"/>

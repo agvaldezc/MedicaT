@@ -46,17 +46,26 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         prepareDataSources()
         
         if accion == "editar" {
-           
             let duracionAux = alarma!.value(forKey: "duracion")
+            
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "H:mm a"
-            let horainicioAux =  alarma!.value(forKey: "fecha")
-            horaInicioField.text = dateFormatter.string(from: horainicioAux as! Date)
+            
+            let frecuenciaString = alarma?.value(forKey: "frecuencia") as! String
+            let frecuencia = Double(frecuenciaString)
+            
+            let horainicio =  alarma!.value(forKey: "fecha") as! Date
+            horaInicioField.text = dateFormatter.string(from: horainicio)
             medicamentoField.text = (alarma?.value(forKey: "nombre") as! String)
             dosisField.text = "\(alarma?.value(forKey: "dosis") as! Float)"
             duracionField.text = String(describing: duracionAux!)
             horasField.text = (alarma?.value(forKey: "frecuencia") as! String)
             presentacionAnt = alarma?.value(forKey: "presentacion") as! String
+            
+            let horaNueva = horainicio.addingTimeInterval(60.0*60.0*frecuencia!)
+            print("hora nueva: \(horaNueva)")
+            
+            print(dateFormatter.string(from: horaNueva))
         }
     }
 
@@ -82,7 +91,11 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
     
         let duracion = Int(duracionField.text!)
         let dosis = Float(dosisField.text!)
-    
+        
+        let id = "\(nombre),\(fecha),\(frecuencia),\(duracion!),\(dosis!)"
+        let alertasTotales = (24/Int(frecuencia)!) * duracion!
+        let siguienteFecha = fecha.addingTimeInterval(60*60*Double(frecuencia)!)
+        
     if accion == "crear" {
         let entity = NSEntityDescription.entity(forEntityName: "Alarmas",in: managedContext)
         let alarmaNueva = NSManagedObject(entity: entity!,insertInto: managedContext)
@@ -93,7 +106,12 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         alarmaNueva.setValue(presentacion, forKey: "presentacion")
         alarmaNueva.setValue(duracion, forKey: "duracion")
         alarmaNueva.setValue(dosis, forKey: "dosis")
-    
+        
+        alarmaNueva.setValue(id, forKey: "id")
+        alarmaNueva.setValue(alertasTotales, forKey: "alertasTotales")
+        alarmaNueva.setValue(0, forKey: "alertasMostradas")
+        alarmaNueva.setValue(siguienteFecha, forKey: "siguienteAlerta")
+        
         do {
             try managedContext.save()
         } catch let error as NSError  {
@@ -114,6 +132,10 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         
         alarma?.setValue(duracion, forKey: "duracion")
         alarma?.setValue(dosis, forKey: "dosis")
+        alarma?.setValue(id, forKey: "id")
+        alarma?.setValue(alertasTotales, forKey: "alertasTotales")
+        alarma?.setValue(0, forKey: "alertasMostradas")
+        alarma?.setValue(siguienteFecha, forKey: "siguienteAlerta")
         
         do {
             try managedContext.save()
@@ -130,8 +152,6 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         
         present(alert, animated: true, completion: nil)
-
-    
     }
    
     }
