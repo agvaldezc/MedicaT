@@ -81,6 +81,8 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         let managedContext = appDelegate.persistentContainer.viewContext
     
         let fecha = datePicker.date
+        let fechaCorrecta = fecha.addingTimeInterval(60*60 * -6)
+      
         let frecuencia = horasField.text!
         let nombre = medicamentoField.text!
         //debugPrint(medicamentoSeleccionado.value(forKey: "presentacion"))
@@ -117,13 +119,20 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         } catch let error as NSError  {
             print("Could not save \(error), \(error.userInfo)")
         }
-        
+      
+        self.createLocalNotification(firedate: siguienteFecha as NSDate, medicamento: nombre, id: id)
+      
         performSegue(withIdentifier: "unwindAlarmas", sender: self)
     }
     else {
         if( presentacion != "")
         {alarma?.setValue(presentacion, forKey: "presentacion")}
         else{
+          
+          let antiguoId = alarma?.value(forKey: "id")
+          
+          cancelNotification(id: antiguoId as! String)
+          
         alarma?.setValue(presentacionAnt, forKey: "presentacion")
         }
         alarma?.setValue(frecuencia, forKey: "frecuencia")
@@ -142,7 +151,9 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
             }   catch let error as NSError  {
                 print("Could not save \(error), \(error.userInfo)")
                 }
-        
+      
+        self.createLocalNotification(firedate: siguienteFecha as NSDate, medicamento: nombre, id: id)
+      
         performSegue(withIdentifier: "unwindAlarmas", sender: self)
     
         }
@@ -155,6 +166,39 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
     }
    
     }
+  
+  func createLocalNotification(firedate: NSDate, medicamento: String, id: String)
+  {
+    let localNotification = UILocalNotification()
+    
+    localNotification.category = "CATEGORY"
+    localNotification.fireDate = firedate as Date
+    
+    localNotification.userInfo = [
+      "message" : "tienes una notificacion",
+      "id" : id
+    ]
+    
+    localNotification.alertBody = "es hora de tomar tu medicamento: \(medicamento)"
+    
+    UIApplication.shared.scheduleLocalNotification(localNotification)
+    
+  }
+  
+  func cancelNotification(id: String){
+    
+    let app:UIApplication = UIApplication.shared
+    
+    for oneEvent in app.scheduledLocalNotifications! {
+      let notification = oneEvent as UILocalNotification
+      if notification.userInfo?["id"] as! String == id {
+        //Cancelling local notification
+        app.cancelLocalNotification(notification)
+        break;
+      }
+    }
+    
+  }
 
     // MARK: - Table view data source
 

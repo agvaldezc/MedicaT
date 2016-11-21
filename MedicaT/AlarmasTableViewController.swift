@@ -54,9 +54,7 @@ class AlarmasTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "alarmaCell", for: indexPath)
         
          let alarma = alarmas![indexPath.row]
-       
-        debugPrint(alarmas)
-        debugPrint(indexPath.row)
+      
         let presentacion = alarma.value(forKey: "presentacion") as! String
         let fecha = alarma.value(forKey: "fecha") as! Date
         
