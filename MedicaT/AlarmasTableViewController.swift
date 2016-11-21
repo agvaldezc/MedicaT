@@ -12,7 +12,7 @@ import CoreData
 class AlarmasTableViewController: UITableViewController {
 
      var alarmas : [NSManagedObject]!
-   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,10 @@ class AlarmasTableViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         
         tableView.tableFooterView?.backgroundColor = UIColor.red
+        
+        //deleteAlarma(alarma:  alarmas[2])
+        
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,8 +52,11 @@ class AlarmasTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "alarmaCell", for: indexPath)
-        let alarma = alarmas![indexPath.row]
         
+         let alarma = alarmas![indexPath.row]
+       
+        debugPrint(alarmas)
+        debugPrint(indexPath.row)
         let presentacion = alarma.value(forKey: "presentacion") as! String
         let fecha = alarma.value(forKey: "fecha") as! Date
         
@@ -99,7 +106,7 @@ class AlarmasTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    func deleteMedicamento(alarma: NSManagedObject) {
+    func deleteAlarma(alarma: NSManagedObject) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
         
@@ -129,6 +136,8 @@ class AlarmasTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            deleteAlarma(alarma: (alarmas?[indexPath.row])!)
+            alarmas?.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -168,7 +177,6 @@ class AlarmasTableViewController: UITableViewController {
             let newView = segue.destination as! RegistrarAlarmaTableViewController
             
             let indexPath = tableView.indexPathForSelectedRow
-            
             newView.accion = "editar"
           newView.alarma  = alarmas?[(indexPath?.row)!]
         }

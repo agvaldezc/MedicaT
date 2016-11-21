@@ -6,7 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarMedicamentoTableViewController.swift"
@@ -15,14 +15,14 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
             endingLineNumber = "87"
-            landmarkName = "pickerView(_:didSelectRow:inComponent:)"
-            landmarkType = "7">
+            landmarkName = "RegistrarMedicamentoTableViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarMedicamentoTableViewController.swift"
@@ -38,7 +38,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarMedicamentoTableViewController.swift"
@@ -65,6 +65,68 @@
             endingLineNumber = "14"
             landmarkName = "AlarmasTableViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.AlarmasTableViewController.alarmas.getter : Swift.ImplicitlyUnwrappedOptional&lt;Swift.Array&lt;__ObjC.NSManagedObject&gt;&gt;"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/AlarmasTableViewController.swift"
+                  timestampString = "501356646.689716"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "46">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.AlarmasTableViewController.alarmas.setter : Swift.ImplicitlyUnwrappedOptional&lt;Swift.Array&lt;__ObjC.NSManagedObject&gt;&gt;"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/AlarmasTableViewController.swift"
+                  timestampString = "501356646.690844"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.AlarmasTableViewController.init (style : __C.UITableViewStyle) -&gt; MedicaT.AlarmasTableViewController"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/AlarmasTableViewController.swift"
+                  timestampString = "501356646.69192"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.AlarmasTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MedicaT.AlarmasTableViewController&gt;"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/AlarmasTableViewController.swift"
+                  timestampString = "501356646.694441"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -86,7 +148,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/AlarmasTableViewController.swift"
@@ -99,14 +161,14 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MedicaT.AlarmasTableViewController.__deallocating_deinit"
                   moduleName = "MedicaT"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alumno/Downloads/MedicaT-medicamentos-2/MedicaT/AlarmasTableViewController.swift"
-                  timestampString = "500686115.79614"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/AlarmasTableViewController.swift"
+                  timestampString = "501356482.453299"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -114,14 +176,14 @@
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MedicaT.AlarmasTableViewController.init (style : __C.UITableViewStyle) -&gt; MedicaT.AlarmasTableViewController"
                   moduleName = "MedicaT"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alumno/Downloads/MedicaT-medicamentos-2/MedicaT/AlarmasTableViewController.swift"
-                  timestampString = "500686115.79726"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/AlarmasTableViewController.swift"
+                  timestampString = "501356482.454623"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
@@ -129,14 +191,14 @@
                   offsetFromSymbolStart = "28">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MedicaT.AlarmasTableViewController.__allocating_init (style : __C.UITableViewStyle) -&gt; MedicaT.AlarmasTableViewController"
                   moduleName = "MedicaT"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alumno/Downloads/MedicaT-medicamentos-2/MedicaT/AlarmasTableViewController.swift"
-                  timestampString = "500686115.79834"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/AlarmasTableViewController.swift"
+                  timestampString = "501356482.455745"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -144,14 +206,14 @@
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MedicaT.AlarmasTableViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MedicaT.AlarmasTableViewController"
                   moduleName = "MedicaT"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alumno/Downloads/MedicaT-medicamentos-2/MedicaT/AlarmasTableViewController.swift"
-                  timestampString = "500686115.800631"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/AlarmasTableViewController.swift"
+                  timestampString = "501356482.457889"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -159,14 +221,14 @@
                   offsetFromSymbolStart = "23">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MedicaT.AlarmasTableViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MedicaT.AlarmasTableViewController&gt;"
                   moduleName = "MedicaT"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alumno/Downloads/MedicaT-medicamentos-2/MedicaT/AlarmasTableViewController.swift"
-                  timestampString = "500686115.801736"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/AlarmasTableViewController.swift"
+                  timestampString = "501356482.458969"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -174,14 +236,14 @@
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MedicaT.AlarmasTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MedicaT.AlarmasTableViewController&gt;"
                   moduleName = "MedicaT"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alumno/Downloads/MedicaT-medicamentos-2/MedicaT/AlarmasTableViewController.swift"
-                  timestampString = "500686115.80278"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/AlarmasTableViewController.swift"
+                  timestampString = "501356482.460168"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
@@ -194,15 +256,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/AlarmasTableViewController.swift"
-            timestampString = "500679859.121635"
+            timestampString = "501364133.786198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "getTableData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -210,23 +272,23 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/AlarmasTableViewController.swift"
-            timestampString = "500680415.146308"
+            timestampString = "501364133.786198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "AlarmasTableViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
@@ -237,6 +299,68 @@
             endingLineNumber = "18"
             landmarkName = "RegistrarAlarmaTableViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.datePicker.getter : __ObjC.UIDatePicker"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501356323.784985"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.init (style : __C.UITableViewStyle) -&gt; MedicaT.RegistrarAlarmaTableViewController"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501356323.786019"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MedicaT.RegistrarAlarmaTableViewController"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501356323.787241"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "255">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MedicaT.RegistrarAlarmaTableViewController&gt;"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501356323.788303"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "184">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -278,11 +402,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
-            timestampString = "500685242.923662"
+            timestampString = "501440779.999399"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "guardarAlarmas(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -294,13 +418,611 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
-            timestampString = "500685258.862049"
+            timestampString = "501440779.999399"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/AlarmasTableViewController.swift"
+            timestampString = "501364133.786198"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "deleteAlarma(alarma:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
+            timestampString = "501356470.959611"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "RegistrarAlarmaTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.alarma.getter : Swift.Optional&lt;__ObjC.NSManagedObject&gt;"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501356482.472955"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.alarma.setter : Swift.Optional&lt;__ObjC.NSManagedObject&gt;"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501356482.474311"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.init (style : __C.UITableViewStyle) -&gt; MedicaT.RegistrarAlarmaTableViewController"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501356482.475413"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MedicaT.RegistrarAlarmaTableViewController"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501356482.476444"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "74">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MedicaT.RegistrarAlarmaTableViewController&gt;"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501356482.47819"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
+            timestampString = "501356512.046963"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6"
+            endingLineNumber = "6">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.__deallocating_deinit"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501356512.466041"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.init (style : __C.UITableViewStyle) -&gt; MedicaT.RegistrarAlarmaTableViewController"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501356512.467098"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.__allocating_init (style : __C.UITableViewStyle) -&gt; MedicaT.RegistrarAlarmaTableViewController"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501356512.468088"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MedicaT.RegistrarAlarmaTableViewController"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501356512.469081"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "74">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MedicaT.RegistrarAlarmaTableViewController"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501356512.470064"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MedicaT.RegistrarAlarmaTableViewController&gt;"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501356512.471047"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MedicaT.RegistrarAlarmaTableViewController&gt;"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501356512.472026"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/AlarmasTableViewController.swift"
+            timestampString = "501364133.786198"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/MedicamentosTableViewController.swift"
+            timestampString = "501356999.664639"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "deleteMedicamento(medicamento:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/MedicamentosTableViewController.swift"
+            timestampString = "501358128.791842"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/RegistrarMedicamentoTableViewController.swift"
+            timestampString = "501358162.262336"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "prepareAccesoryViews()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/RegistrarMedicamentoTableViewController.swift"
+            timestampString = "501358183.213547"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "pickerView(_:didSelectRow:inComponent:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/RegistrarMedicamentoTableViewController.swift"
+            timestampString = "501358185.829345"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "pickerView(_:titleForRow:forComponent:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/RegistrarMedicamentoTableViewController.swift"
+            timestampString = "501358187.981256"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "pickerView(_:numberOfRowsInComponent:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/RegistrarMedicamentoTableViewController.swift"
+            timestampString = "501358191.853111"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/AlarmasTableViewController.swift"
+            timestampString = "501364133.786198"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/AlarmasTableViewController.swift"
+            timestampString = "501364133.786198"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/AlarmasTableViewController.swift"
+            timestampString = "501364133.786198"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
+            timestampString = "501440779.999399"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
+            timestampString = "501440779.999399"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "guardarAlarmas(sender:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/AlarmasTableViewController.swift"
+            timestampString = "501372307.0271"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
+            timestampString = "501440779.999399"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "guardarAlarmas(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
+            timestampString = "501440779.999399"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "guardarAlarmas(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
+            timestampString = "501440779.999399"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "pickerView(_:didSelectRow:inComponent:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/RegistrarMedicamentoTableViewController.swift"
+            timestampString = "501375829.355138"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "guardarMedicamento(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
+            timestampString = "501440779.999399"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "prepareDataSources()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
+            timestampString = "501440779.999399"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
+            timestampString = "501440779.999399"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501378676.426101"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "6739">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarAlarmaTableViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
+                  timestampString = "501378676.427168"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "7597">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
