@@ -29,10 +29,156 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         UINavigationBar.appearance().tintColor = UIColor.white
+      
         
-        // Override point for customization after application launch.
-        return true
+      //Actions para las notificaciones
+      
+      let okAction:UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+      okAction.identifier = "OK_ACTION"
+      okAction.title = "OK"
+      
+      okAction.activationMode = UIUserNotificationActivationMode.background
+      okAction.isDestructive = false
+      okAction.isAuthenticationRequired = false
+      
+      let DespuesAction:UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+      DespuesAction.identifier = "DESPUES_ACTION"
+      DespuesAction.title = "Recuerdame en 5 minutos"
+      
+      DespuesAction.activationMode = UIUserNotificationActivationMode.background
+      DespuesAction.isDestructive = false
+      DespuesAction.isAuthenticationRequired = false
+      
+      let ahoraNoAction:UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+      ahoraNoAction.identifier = "AHORA_NO_ACTION"
+      ahoraNoAction.title = "Ahora no"
+      
+      ahoraNoAction.activationMode = UIUserNotificationActivationMode.foreground
+      ahoraNoAction.isDestructive = false
+      ahoraNoAction.isAuthenticationRequired = false
+      
+      //Category para las notificaciones
+      
+      let category:UIMutableUserNotificationCategory = UIMutableUserNotificationCategory()
+      category.identifier = "CATEGORY"
+      
+      let defaultActions:NSArray = [okAction, ahoraNoAction, DespuesAction]
+      let minimalActions:NSArray = [okAction, ahoraNoAction]
+      
+      category.setActions(defaultActions as! [UIUserNotificationAction], for: UIUserNotificationActionContext.default)
+      category.setActions(minimalActions as! [UIUserNotificationAction], for: UIUserNotificationActionContext.minimal)
+      
+      let categories:NSSet = NSSet(object: category)
+      
+      //Notification Settings
+      
+      let mySettings = UIUserNotificationSettings(types: [.badge, .alert], categories: categories as! Set<UIUserNotificationCategory>)
+      
+      UIApplication.shared.registerUserNotificationSettings(mySettings)
+      
+      
+      // Override point for customization after application launch.
+      return true
+  }
+  
+  // crea la notificacion
+  func createLocalNotification(firedate: NSDate, notification: UILocalNotification)
+  {
+    
+    notification.fireDate = firedate as Date
+    UIApplication.shared.scheduleLocalNotification(notification)
+    
+  }
+  
+  
+  //Acciones que toma despues de hacer click en la notificacion
+  func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, completionHandler: @escaping () -> Void) {
+    
+    let id = notification.userInfo?["id"] as! String
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let managedContext = appDelegate.persistentContainer.viewContext
+
+    let alarma : NSManagedObject!
+    
+    let fetchRequest : NSFetchRequest<Alarmas> = Alarmas.fetchRequest()
+    fetchRequest.predicate = NSPredicate(format: "id == %@", id)
+    
+    do{
+      let results = try managedContext.fetch(fetchRequest)
+      alarma = results[0] as NSManagedObject
+
+    }catch let error as NSError {
+      fatalError("error, could not fetch alarma from notifications")
     }
+    
+    let alertaActual = alarma.value(forKey: "siguienteAlerta") as! Date
+    let alertasTotales = alarma.value(forKey: "alertasTotales") as! Int
+    var alertasMostradas = alarma.value(forKey: "alertasMostradas") as! Int
+    let nombreMedicamento = alarma.value(forKey: "nombre") as! String
+    let frecuenciaString = alarma.value(forKey: "frecuencia") as! String
+    let frecuencia = Double(frecuenciaString)
+    
+    if identifier == "AHORA_NO_ACTION"{
+      
+      let entity = NSEntityDescription.entity(forEntityName: "Historial", in: managedContext)
+      let record = NSManagedObject(entity: entity!, insertInto: managedContext)
+      
+      record.setValue(alertaActual, forKey: "fecha")
+      record.setValue(false, forKey: "tomada")
+      record.setValue(nombreMedicamento, forKey: "medicamento")
+      
+      let siguienteAlerta = alertaActual.addingTimeInterval(60 * 60 * frecuencia!)
+      
+      alertasMostradas = alertasMostradas + 1
+      
+      if (alertasMostradas < alertasTotales) {
+        
+        alarma.setValue(siguienteAlerta, forKey: "siguienteAlerta")
+        alarma.setValue(alertasMostradas, forKey: "alertasMostradas")
+        self.createLocalNotification(firedate: siguienteAlerta as NSDate, notification: notification)
+
+      }
+      
+      do {
+        try managedContext.save()
+      }   catch let error as NSError  {
+        print("Could not save \(error), \(error.userInfo)")
+      }
+    }
+    
+    if identifier == "OK_ACTION"{
+
+      let entity = NSEntityDescription.entity(forEntityName: "Historial", in: managedContext)
+      let record = NSManagedObject(entity: entity!, insertInto: managedContext)
+      
+      record.setValue(alertaActual, forKey: "fecha")
+      record.setValue(true, forKey: "tomada")
+      record.setValue(nombreMedicamento, forKey: "medicamento")
+      
+      let siguienteAlerta = alertaActual.addingTimeInterval(60 * 60 * frecuencia!)
+      
+      alertasMostradas = alertasMostradas + 1
+      
+      if (alertasMostradas < alertasTotales) {
+        
+        alarma.setValue(siguienteAlerta, forKey: "siguienteAlerta")
+        alarma.setValue(alertasMostradas, forKey: "alertasMostradas")
+        self.createLocalNotification(firedate: siguienteAlerta as NSDate, notification: notification)
+        
+      }
+      
+      do {
+        try managedContext.save()
+      }   catch let error as NSError  {
+        print("Could not save \(error), \(error.userInfo)")
+      }
+    }
+    
+    if identifier == "DESPUES_ACTION"{
+      self.createLocalNotification(firedate: NSDate(timeIntervalSinceNow: 300), notification: notification)
+    }
+  }
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
