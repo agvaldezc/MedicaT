@@ -7,6 +7,7 @@
         <attribute name="duracion" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="fecha" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="frecuencia" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="presentacion" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="siguienteAlerta" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -24,7 +25,7 @@
         <attribute name="tipoMedida" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Alarmas" positionX="-279" positionY="72" width="128" height="180"/>
+        <element name="Alarmas" positionX="-279" positionY="72" width="128" height="195"/>
         <element name="Medicamento" positionX="-81" positionY="68" width="128" height="120"/>
         <element name="Historial" positionX="-180" positionY="135" width="128" height="90"/>
     </elements>

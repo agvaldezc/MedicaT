@@ -91,7 +91,11 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
     
         let duracion = Int(duracionField.text!)
         let dosis = Float(dosisField.text!)
-    
+        
+        let id = "\(nombre),\(fecha),\(frecuencia),\(duracion!),\(dosis!)"
+        let alertasTotales = (24/Int(frecuencia)!) * duracion!
+        let siguienteFecha = fecha.addingTimeInterval(60*60*Double(frecuencia)!)
+        
     if accion == "crear" {
         let entity = NSEntityDescription.entity(forEntityName: "Alarmas",in: managedContext)
         let alarmaNueva = NSManagedObject(entity: entity!,insertInto: managedContext)
@@ -102,7 +106,12 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         alarmaNueva.setValue(presentacion, forKey: "presentacion")
         alarmaNueva.setValue(duracion, forKey: "duracion")
         alarmaNueva.setValue(dosis, forKey: "dosis")
-    
+        
+        alarmaNueva.setValue(id, forKey: "id")
+        alarmaNueva.setValue(alertasTotales, forKey: "alertasTotales")
+        alarmaNueva.setValue(0, forKey: "alertasMostradas")
+        alarmaNueva.setValue(siguienteFecha, forKey: "siguienteAlerta")
+        
         do {
             try managedContext.save()
         } catch let error as NSError  {
@@ -123,6 +132,10 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         
         alarma?.setValue(duracion, forKey: "duracion")
         alarma?.setValue(dosis, forKey: "dosis")
+        alarma?.setValue(id, forKey: "id")
+        alarma?.setValue(alertasTotales, forKey: "alertasTotales")
+        alarma?.setValue(0, forKey: "alertasMostradas")
+        alarma?.setValue(siguienteFecha, forKey: "siguienteAlerta")
         
         do {
             try managedContext.save()
