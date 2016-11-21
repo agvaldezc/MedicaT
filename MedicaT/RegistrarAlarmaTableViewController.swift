@@ -46,17 +46,26 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         prepareDataSources()
         
         if accion == "editar" {
-           
             let duracionAux = alarma!.value(forKey: "duracion")
+            
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "H:mm a"
-            let horainicioAux =  alarma!.value(forKey: "fecha")
-            horaInicioField.text = dateFormatter.string(from: horainicioAux as! Date)
+            
+            let frecuenciaString = alarma?.value(forKey: "frecuencia") as! String
+            let frecuencia = Double(frecuenciaString)
+            
+            let horainicio =  alarma!.value(forKey: "fecha") as! Date
+            horaInicioField.text = dateFormatter.string(from: horainicio)
             medicamentoField.text = (alarma?.value(forKey: "nombre") as! String)
             dosisField.text = "\(alarma?.value(forKey: "dosis") as! Float)"
             duracionField.text = String(describing: duracionAux!)
             horasField.text = (alarma?.value(forKey: "frecuencia") as! String)
             presentacionAnt = alarma?.value(forKey: "presentacion") as! String
+            
+            let horaNueva = horainicio.addingTimeInterval(60.0*60.0*frecuencia!)
+            print("hora nueva: \(horaNueva)")
+            
+            print(dateFormatter.string(from: horaNueva))
         }
     }
 
@@ -130,8 +139,6 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         
         present(alert, animated: true, completion: nil)
-
-    
     }
    
     }
