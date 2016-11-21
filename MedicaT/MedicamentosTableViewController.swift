@@ -53,8 +53,10 @@ class MedicamentosTableViewController: UITableViewController {
         let medicamento = medicamentos![indexPath.row]
         let nombre = (medicamento.value(forKey: "nombre") as! String)
         let presentacion = (medicamento.value(forKey: "presentacion") as! String)
+        let tipoMedida = medicamento.value(forKey: "tipoMedida") as! String
+        let medida = medicamento.value(forKey: "medida") as! Float
         
-        cell.textLabel?.text = nombre
+        cell.textLabel?.text = "\(nombre), \(medida) \(tipoMedida)"
         cell.detailTextLabel?.text = presentacion
         
         if presentacion == "Cápsulas" || presentacion == "Pastillas" || presentacion == "Tabletas" {

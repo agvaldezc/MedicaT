@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1004" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Alarmas" representedClassName="Alarmas" syncable="YES" codeGenerationType="class">
         <attribute name="dosis" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="duracion" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -13,9 +13,10 @@
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notas" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="presentacion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tipoMedida" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="Alarmas" positionX="-279" positionY="72" width="128" height="135"/>
-        <element name="Medicamento" positionX="-81" positionY="68" width="128" height="105"/>
+        <element name="Medicamento" positionX="-81" positionY="68" width="128" height="120"/>
     </elements>
 </model>

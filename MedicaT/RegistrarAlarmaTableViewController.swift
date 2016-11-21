@@ -57,8 +57,6 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
             duracionField.text = String(describing: duracionAux!)
             horasField.text = (alarma?.value(forKey: "frecuencia") as! String)
             presentacionAnt = alarma?.value(forKey: "presentacion") as! String
-         
-            
         }
     }
 
@@ -207,8 +205,9 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
             let presentacionMedicamento = medicamento.value(forKey: "presentacion")
             newPresentacion = true
             let medidaMedicamento = medicamento.value(forKey: "medida")
+            let tipoMedida = medicamento.value(forKey: "tipoMedida")
 
-            medicamentoField.text = "\(nombreMedicamento!), \(presentacionMedicamento!), \(medidaMedicamento!)"
+            medicamentoField.text = "\(nombreMedicamento!), \(presentacionMedicamento!), \(medidaMedicamento!) \(tipoMedida!)"
             
         } else if horasField.isFirstResponder {
             horasField.text = String(horas[row])
@@ -225,8 +224,9 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
             let presentacionMedicamento = medicamento.value(forKey: "presentacion")
 
             let medidaMedicamento = medicamento.value(forKey: "medida")
+            let tipoMedida = medicamento.value(forKey: "tipoMedida")
             
-            return "\(nombreMedicamento!), \(presentacionMedicamento!), \(medidaMedicamento!)"
+            return "\(nombreMedicamento!), \(presentacionMedicamento!), \(medidaMedicamento!) \(tipoMedida!)"
             
         } else if horasField.isFirstResponder {
             return String(horas[row])

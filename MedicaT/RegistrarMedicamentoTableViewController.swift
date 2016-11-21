@@ -9,17 +9,21 @@
 import UIKit
 import CoreData
 
-class RegistrarMedicamentoTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class RegistrarMedicamentoTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var nombreField: UITextField!
     @IBOutlet weak var medidaField: UITextField!
     @IBOutlet weak var presentacionField: UITextField!
     @IBOutlet weak var notasTextView: UITextView!
+    @IBOutlet weak var tipoMedidaField: UITextField!
     
+    let pickerView = UIPickerView()
     var medicamento : NSManagedObject?
     var accion : String!
     
     let presentaciones = ["Aerosol", "Cápsulas", "Emulsión", "Gotas nasales", "Gotas ópticas", "Inyección", "Jarabe", "Tabletas", "Pomada", "Pastillas"]
+    
+    let medidas = ["ml", "l", "mg", "g", "kg"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +37,8 @@ class RegistrarMedicamentoTableViewController: UITableViewController, UIPickerVi
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
         
+        tipoMedidaField.text = "ml"
+        
         preparePickerViews()
         prepareAccesoryViews()
         
@@ -44,6 +50,8 @@ class RegistrarMedicamentoTableViewController: UITableViewController, UIPickerVi
             presentacionField.text = (medicamento?.value(forKey: "presentacion") as! String)
             
             notasTextView.text = medicamento?.value(forKey: "notas") as! String
+            
+            tipoMedidaField.text = medicamento?.value(forKey: "tipoMedida") as! String
         }
     }
     
@@ -66,6 +74,8 @@ class RegistrarMedicamentoTableViewController: UITableViewController, UIPickerVi
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if presentacionField.isFirstResponder {
             return presentaciones.count
+        } else if tipoMedidaField.isFirstResponder {
+            return medidas.count
         } else {
             return 0
         }
@@ -74,14 +84,18 @@ class RegistrarMedicamentoTableViewController: UITableViewController, UIPickerVi
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if presentacionField.isFirstResponder {
             return presentaciones[row]
+        } else if tipoMedidaField.isFirstResponder {
+            return medidas[row]
         } else {
-            return "Nothing"
+            return "Nada"
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if presentacionField.isFirstResponder {
             presentacionField.text = presentaciones[row]
+        } else if tipoMedidaField.isFirstResponder {
+            tipoMedidaField.text = medidas[row]
         }
     }
     
@@ -93,6 +107,7 @@ class RegistrarMedicamentoTableViewController: UITableViewController, UIPickerVi
             let medida = Float(medidaField.text!)
             let presentacion = presentacionField.text!
             var notas = ""
+            let tipoMedida = tipoMedidaField.text!
             
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             
@@ -113,6 +128,7 @@ class RegistrarMedicamentoTableViewController: UITableViewController, UIPickerVi
                 medicamentoNuevo.setValue(medida, forKey: "medida")
                 medicamentoNuevo.setValue(presentacion, forKey: "presentacion")
                 medicamentoNuevo.setValue(notas, forKey: "notas")
+                medicamentoNuevo.setValue(tipoMedida, forKey: "tipoMedida")
                 
                 //4
                 do {
@@ -128,6 +144,7 @@ class RegistrarMedicamentoTableViewController: UITableViewController, UIPickerVi
                 medicamento?.setValue(medida, forKey: "medida")
                 medicamento?.setValue(presentacion, forKey: "presentacion")
                 medicamento?.setValue(notas, forKey: "notas")
+                medicamento?.setValue(tipoMedida, forKey: "tipoMedida")
                 
                 //4
                 do {
@@ -149,12 +166,10 @@ class RegistrarMedicamentoTableViewController: UITableViewController, UIPickerVi
     
     func preparePickerViews() {
         
-        let presentacionPickerView = UIPickerView()
+        pickerView.delegate = self
         
-        presentacionPickerView.delegate = self
-        
-        presentacionField.inputView = presentacionPickerView
-        
+        presentacionField.inputView = pickerView
+        tipoMedidaField.inputView = pickerView
     }
     
     func prepareAccesoryViews() {
@@ -180,13 +195,32 @@ class RegistrarMedicamentoTableViewController: UITableViewController, UIPickerVi
         medidaField.inputAccessoryView = accessoryView
         presentacionField.inputAccessoryView = accessoryView
         notasTextView.inputAccessoryView = accessoryView
+        tipoMedidaField.inputAccessoryView = accessoryView
+        
+        nombreField.delegate = self
+        medidaField.delegate = self
+        presentacionField.delegate = self
+        tipoMedidaField.delegate = self
     }
     
     func dismissKeyboard() {
         view.endEditing(true)
     }
     
+    func updatePickerContent() {
+        pickerView.reloadAllComponents()
+    }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == presentacionField {
+            updatePickerContent()
+        }
+        
+        if textField == tipoMedidaField {
+            updatePickerContent()
+        }
+    }
+
     /*
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
