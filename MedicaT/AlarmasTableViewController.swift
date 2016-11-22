@@ -107,6 +107,9 @@ class AlarmasTableViewController: UITableViewController {
     func deleteAlarma(alarma: NSManagedObject) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
+        let id = alarma.value(forKey: "id") as! String
+      
+        cancelNotification(id: id)
         
         managedContext.delete(alarma)
         
@@ -119,6 +122,21 @@ class AlarmasTableViewController: UITableViewController {
         tableView.reloadData()
         
     }
+  
+  func cancelNotification(id: String){
+    
+    let app:UIApplication = UIApplication.shared
+    
+    for oneEvent in app.scheduledLocalNotifications! {
+      let notification = oneEvent as UILocalNotification
+      if notification.userInfo?["id"] as! String == id {
+        //Cancelling local notification
+        app.cancelLocalNotification(notification)
+        break;
+      }
+    }
+    
+  }
 
 
     /*

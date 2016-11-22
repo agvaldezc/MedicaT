@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import UserNotifications
+import AVFoundation
 
 class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
@@ -44,6 +46,7 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         getTableData()
         prepareDataSources()
+        prepareAccesoryViews()
         
         if accion == "editar" {
             let duracionAux = alarma!.value(forKey: "duracion")
@@ -81,7 +84,7 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         let managedContext = appDelegate.persistentContainer.viewContext
     
         let fecha = datePicker.date
-        let fechaCorrecta = fecha.addingTimeInterval(60*60 * -6)
+        _ = fecha.addingTimeInterval(60*60 * -6)
       
         let frecuencia = horasField.text!
         let nombre = medicamentoField.text!
@@ -169,19 +172,36 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
   
   func createLocalNotification(firedate: NSDate, medicamento: String, id: String)
   {
-    let localNotification = UILocalNotification()
+    let localNotification = UNMutableNotificationContent()
     
-    localNotification.category = "CATEGORY"
-    localNotification.fireDate = firedate as Date
+    // create a sound ID, in this case its the tweet sound.
+    let systemSoundID: SystemSoundID = 1016
+    
+    localNotification.categoryIdentifier = "CATEGORY"
+    localNotification.title = "Recordatorio"
     
     localNotification.userInfo = [
       "message" : "tienes una notificacion",
-      "id" : id
+      "id" : id,
+      "medicamento" : medicamento
     ]
     
-    localNotification.alertBody = "es hora de tomar tu medicamento: \(medicamento)"
+    localNotification.sound = UNNotificationSound.default()
+    localNotification.body = "es hora de tomar tu medicamento: \(medicamento)"
     
-    UIApplication.shared.scheduleLocalNotification(localNotification)
+    let timeInterval = firedate.timeIntervalSince(Date())
+    
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
+    
+    print(timeInterval)
+    
+    let request = UNNotificationRequest(identifier: id, content: localNotification, trigger: trigger)
+    
+    UNUserNotificationCenter.current().add(request) {(error) in
+      if let error = error {
+        print("Uh oh! We had an error: \(error)")
+      }
+    }
     
   }
   
@@ -325,7 +345,34 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         horaInicioField.text = dateFormatter.string(from: sender.date)
         
     }
+  
+  func prepareAccesoryViews() {
     
+    let accessoryView = UIToolbar()
+    
+    let accessoryButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
+    let accessorySpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+    
+    let items = [accessorySpace, accessoryButton]
+    
+    accessoryButton.tintColor = UIColor.white
+    
+    accessoryView.barStyle = .default
+    accessoryView.backgroundColor = UIColor(red: (110/255.0) as CGFloat, green: (171/255) as CGFloat, blue: (247/255) as CGFloat, alpha: 1.0 as CGFloat)
+    accessoryView.items = items
+    accessoryView.isTranslucent = false
+    accessoryView.barTintColor = UIColor(red: (110/255.0) as CGFloat, green: (171/255) as CGFloat, blue: (247/255) as CGFloat, alpha: 1.0 as CGFloat)
+    accessoryView.isUserInteractionEnabled = true
+    accessoryView.sizeToFit()
+    
+    medicamentoField.inputAccessoryView = accessoryView
+    dosisField.inputAccessoryView = accessoryView
+    horasField.inputAccessoryView = accessoryView
+    horaInicioField.inputAccessoryView = accessoryView
+    duracionField.inputAccessoryView = accessoryView
+  }
+
+  
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
