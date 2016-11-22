@@ -33,6 +33,8 @@ class InformacionPersonalTableViewController: UITableViewController {
         navigationItem.titleView?.tintColor = UIColor.white
         prepareAccesoryViews()
         
+        profileImage.layer.cornerRadius = profileImage.frame.width / 2
+        
         switch rol {
         case "Paciente":
             

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class ConfiguracionTableViewController: UITableViewController {
+class ConfiguracionTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,23 +19,13 @@ class ConfiguracionTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
     }
 
     /*
@@ -82,14 +73,30 @@ class ConfiguracionTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "editarPaciente" {
+            let newView = segue.destination as! InformacionPersonalTableViewController
+            
+            newView.rol = "Paciente"
+        }
+        
+        if segue.identifier == "editarMedico" {
+            let newView = segue.destination as! InformacionPersonalTableViewController
+            
+            newView.rol = "Médico"
+        }
+        
+        if segue.identifier == "editarResponsable" {
+            let newView = segue.destination as! InformacionPersonalTableViewController
+            
+            newView.rol = "Responsable"
+        }
     }
-    */
-
 }

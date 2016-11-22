@@ -31,7 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     UINavigationBar.appearance().tintColor = UIColor.white
     
-    
     let actionOk = UNNotificationAction(identifier: "OK_ACTION", title: "Ok", options: [])
     let actionDespues = UNNotificationAction(identifier: "DESPUES_ACTION", title: "Recuerdame en 5 minutos", options: [])
     let actionAhoraNo = UNNotificationAction(identifier: "AHORA_NO_ACTION", title: "Ahora no", options: [])
@@ -222,6 +221,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
   {
   
     let localNotification = UNMutableNotificationContent()
+    
     
     localNotification.categoryIdentifier = "CATEGORY"
     localNotification.title = "Recordatorio"

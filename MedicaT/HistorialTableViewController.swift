@@ -21,6 +21,9 @@ class HistorialTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        tableView.refreshControl?.addTarget(self, action: #selector(refreshTable), for: .valueChanged)
+        
       getTableData()
       tableView.tableFooterView = UIView()
     }
@@ -112,6 +115,11 @@ class HistorialTableViewController: UITableViewController {
     tableView.reloadData()
     
   }
+    
+    func refreshTable() {
+        getTableData()
+        refreshControl?.endRefreshing()
+    }
 
 
   
