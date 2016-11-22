@@ -432,11 +432,11 @@
             </objects>
             <point key="canvasLocation" x="918" y="584"/>
         </scene>
-        <!--Mis Medicamentos-->
+        <!--Medicamentos-->
         <scene sceneID="kAT-Gb-g9z">
             <objects>
                 <navigationController id="EcA-zW-bVx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mis Medicamentos" image="pildora" id="hrm-cJ-dDv"/>
+                    <tabBarItem key="tabBarItem" title="Medicamentos" image="pildora" id="hrm-cJ-dDv"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Eo-fH-El8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

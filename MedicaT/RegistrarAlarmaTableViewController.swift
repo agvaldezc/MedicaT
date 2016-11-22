@@ -9,7 +9,6 @@
 import UIKit
 import CoreData
 import UserNotifications
-import AVFoundation
 
 class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
@@ -185,7 +184,7 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
     ]
     
     localNotification.sound = UNNotificationSound.default()
-    localNotification.body = "es hora de tomar tu medicamento: \(medicamento)"
+    localNotification.body = "Es hora de tomar tu medicamento: \(medicamento)"
     
     let timeInterval = firedate.timeIntervalSince(Date())
     
@@ -251,7 +250,7 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         
         pickerView.delegate = self
         
-        datePicker.datePickerMode = .time
+        datePicker.datePickerMode = .dateAndTime
         datePicker.addTarget(self, action: #selector(datePickerChanged), for: UIControlEvents.valueChanged)
         
         medicamentoField.inputView = pickerView

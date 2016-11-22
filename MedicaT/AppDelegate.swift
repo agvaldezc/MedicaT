@@ -39,9 +39,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     //let actionTest = UNNotificationAction(identifier: "TEST_ACTION", title: "TEST", options: [])
     
     let center = UNUserNotificationCenter.current()
+    center.removeAllDeliveredNotifications()
+    center.removeAllPendingNotificationRequests()
     let options: UNAuthorizationOptions = [.alert, .sound]
     
-    let notificationsCategory = UNNotificationCategory(identifier: "CATEGORY", actions: [actionOk, actionAhoraNo, actionDespues], intentIdentifiers: [], options: [])
+    let notificationsCategory = UNNotificationCategory(identifier: "CATEGORY", actions: [actionOk, actionAhoraNo, actionDespues], intentIdentifiers: [], options: [.customDismissAction])
     
     center.setNotificationCategories([notificationsCategory])
     
@@ -108,7 +110,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                               willPresent notification: UNNotification,
                               withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
     // Play sound and show alert to the user
-    completionHandler([.alert,.sound])
+    completionHandler([.alert, .sound])
   }
   
   func userNotificationCenter(_ center: UNUserNotificationCenter,
@@ -142,13 +144,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     
     switch response.actionIdentifier {
-    case UNNotificationDismissActionIdentifier:
-      
-      break
-    case UNNotificationDefaultActionIdentifier:
-      
-      break
-    case "OK_ACTION":
+        
+    case "OK_ACTION", UNNotificationDefaultActionIdentifier:
       let entity = NSEntityDescription.entity(forEntityName: "Historial", in: managedContext)
       let record = NSManagedObject(entity: entity!, insertInto: managedContext)
       
@@ -184,7 +181,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
       
       break
 
-    case "AHORA_NO_ACTION":
+    case "AHORA_NO_ACTION", UNNotificationDismissActionIdentifier:
       let entity = NSEntityDescription.entity(forEntityName: "Historial", in: managedContext)
       let record = NSManagedObject(entity: entity!, insertInto: managedContext)
       
