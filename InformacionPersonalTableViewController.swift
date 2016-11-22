@@ -54,7 +54,6 @@ class InformacionPersonalTableViewController: UITableViewController {
                 emailField.text = medico?["email"]
             }
             
-            print(medico)
             break
         case "Responsable":
             let responsable = userPrefs.value(forKey: "responsable") as? [String:String]
@@ -65,7 +64,6 @@ class InformacionPersonalTableViewController: UITableViewController {
                 emailField.text = responsable?["email"]
             }
             
-            print(responsable)
             break
         default:
             break

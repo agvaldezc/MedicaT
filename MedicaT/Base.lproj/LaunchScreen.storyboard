@@ -25,11 +25,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MedicaT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96F-hh-c1n">
                                 <rect key="frame" x="16" y="239" width="343" height="188"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="48"/>
-                                <color key="textColor" red="0.32789203524589539" green="0.6252405047416687" blue="0.9992254376411438" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.98613516115320499" green="0.98960137086490374" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.32375460859999999" green="0.61358636619999996" blue="0.98313194510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="96F-hh-c1n" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="BaJ-lC-Apx"/>
                             <constraint firstItem="96F-hh-c1n" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="Hbl-eC-tO7"/>

@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
       window?.rootViewController = newView
     }
     
+    application.statusBarStyle = .lightContent
+    
     UINavigationBar.appearance().tintColor = UIColor.white
     
     let actionOk = UNNotificationAction(identifier: "OK_ACTION", title: "Ok", options: [])

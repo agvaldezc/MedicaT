@@ -905,7 +905,7 @@
         <!--Acerca de-->
         <scene sceneID="HrT-Ti-pcY">
             <objects>
-                <viewController id="AoQ-X6-aeT" sceneMemberID="viewController">
+                <viewController id="AoQ-X6-aeT" customClass="AcercaDeViewController" customModule="MedicaT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HaA-2b-DxA"/>
                         <viewControllerLayoutGuide type="bottom" id="fK1-bY-AnA"/>
@@ -914,78 +914,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diseño y programación:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKN-On-TPC">
-                                <rect key="frame" x="16" y="86" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="elj-8b-gMl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alan Gustavo Valdez Cascajares" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N93-gA-ggO">
-                                <rect key="frame" x="43" y="148" width="288" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="mPe-gb-eSO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Armando Cons Robles" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdz-ky-KiA">
-                                <rect key="frame" x="43" y="194" width="288" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="evB-7o-f1O"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regina Gallardo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQn-nI-UYs">
-                                <rect key="frame" x="43" y="240" width="288" height="38"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Íconos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXj-ax-v7w">
-                                <rect key="frame" x="16" y="318" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="znY-yb-0pK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons8: https://icons8.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5A1-zR-OJh">
-                                <rect key="frame" x="16" y="382" width="343" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bnY-id-rNo">
+                                <rect key="frame" x="16" y="139" width="343" height="336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">MedicaT ha sido desarrollado por estudiantes del Tecnológico de Monterrey durante el semestre Agosto Diciembre de 2016, como parte del curso Desarrollo de Aplicaciones para Dispositivos Móviles y asesorados por la maestra Yolanda Martínez Treviño.Desarrolladores:Alan Gustavo Valdez CascajaresRegina GallardoArmando Cons RoblesMedicaT se distribuye como está de manera gratuita y se prohíbe su distribución y uso con fines de lucro.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.92146831750869751" green="0.92162626981735229" blue="0.92145836353302002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Qdz-ky-KiA" firstAttribute="top" secondItem="N93-gA-ggO" secondAttribute="bottom" constant="8" symbolic="YES" id="2QC-H7-3GX"/>
-                            <constraint firstItem="N93-gA-ggO" firstAttribute="trailing" secondItem="Qdz-ky-KiA" secondAttribute="trailing" id="3Gh-Ng-hHY"/>
-                            <constraint firstItem="HXj-ax-v7w" firstAttribute="top" secondItem="tQn-nI-UYs" secondAttribute="bottom" constant="40" id="5tL-nJ-NXj"/>
-                            <constraint firstItem="Qdz-ky-KiA" firstAttribute="leading" secondItem="tQn-nI-UYs" secondAttribute="leading" id="7SZ-xd-N3r"/>
-                            <constraint firstItem="xKN-On-TPC" firstAttribute="leading" secondItem="zxn-AZ-in6" secondAttribute="leadingMargin" id="Gde-0f-FTZ"/>
-                            <constraint firstItem="xKN-On-TPC" firstAttribute="trailing" secondItem="HXj-ax-v7w" secondAttribute="trailing" id="IdN-l0-7Rd"/>
-                            <constraint firstItem="fK1-bY-AnA" firstAttribute="top" secondItem="5A1-zR-OJh" secondAttribute="bottom" constant="206" id="T8u-SJ-qeh"/>
-                            <constraint firstItem="tQn-nI-UYs" firstAttribute="top" secondItem="Qdz-ky-KiA" secondAttribute="bottom" constant="8" symbolic="YES" id="e7R-0J-t9U"/>
-                            <constraint firstItem="N93-gA-ggO" firstAttribute="leading" secondItem="Qdz-ky-KiA" secondAttribute="leading" id="ePk-pT-Bv6"/>
-                            <constraint firstItem="5A1-zR-OJh" firstAttribute="top" secondItem="HXj-ax-v7w" secondAttribute="bottom" constant="34" id="gdt-CC-JWD"/>
-                            <constraint firstItem="xKN-On-TPC" firstAttribute="leading" secondItem="HXj-ax-v7w" secondAttribute="leading" id="glV-9w-Osz"/>
-                            <constraint firstItem="xKN-On-TPC" firstAttribute="centerX" secondItem="N93-gA-ggO" secondAttribute="centerX" id="i5R-Jo-Twr"/>
-                            <constraint firstItem="Qdz-ky-KiA" firstAttribute="trailing" secondItem="tQn-nI-UYs" secondAttribute="trailing" id="iqK-gV-BV2"/>
-                            <constraint firstItem="HXj-ax-v7w" firstAttribute="trailing" secondItem="5A1-zR-OJh" secondAttribute="trailing" id="is8-lA-BZN"/>
-                            <constraint firstItem="xKN-On-TPC" firstAttribute="top" secondItem="HaA-2b-DxA" secondAttribute="bottom" constant="22" id="izn-fo-dMK"/>
-                            <constraint firstItem="N93-gA-ggO" firstAttribute="top" secondItem="xKN-On-TPC" secondAttribute="bottom" constant="32" id="mhP-Aw-KHg"/>
-                            <constraint firstItem="xKN-On-TPC" firstAttribute="trailing" secondItem="zxn-AZ-in6" secondAttribute="trailingMargin" id="ph6-tp-bJc"/>
-                            <constraint firstItem="HXj-ax-v7w" firstAttribute="leading" secondItem="5A1-zR-OJh" secondAttribute="leading" id="uC8-GU-X6U"/>
-                            <constraint firstItem="HXj-ax-v7w" firstAttribute="centerY" secondItem="zxn-AZ-in6" secondAttribute="centerY" id="viF-FI-RQf"/>
-                            <constraint firstItem="N93-gA-ggO" firstAttribute="leading" secondItem="zxn-AZ-in6" secondAttribute="leadingMargin" constant="27" id="wxQ-Eu-PQ2"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Acerca de" id="mTC-hS-VLU"/>
                 </viewController>

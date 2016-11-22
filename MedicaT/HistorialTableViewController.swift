@@ -21,6 +21,7 @@ class HistorialTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
         tableView.refreshControl?.addTarget(self, action: #selector(refreshTable), for: .valueChanged)
         
