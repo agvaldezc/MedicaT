@@ -44,6 +44,7 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         getTableData()
         prepareDataSources()
         prepareAccesoryViews()
@@ -173,9 +174,6 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
   func createLocalNotification(firedate: NSDate, medicamento: String, id: String)
   {
     let localNotification = UNMutableNotificationContent()
-    
-    // create a sound ID, in this case its the tweet sound.
-    let systemSoundID: SystemSoundID = 1016
     
     localNotification.categoryIdentifier = "CATEGORY"
     localNotification.title = "Recordatorio"

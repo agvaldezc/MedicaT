@@ -17,6 +17,7 @@
 		E957012C1DB80C730051ACED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E957012B1DB80C730051ACED /* Assets.xcassets */; };
 		E957012F1DB80C740051ACED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E957012D1DB80C740051ACED /* LaunchScreen.storyboard */; };
 		E95701391DB817050051ACED /* InformacionPersonalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95701381DB817050051ACED /* InformacionPersonalTableViewController.swift */; };
+		E95BB06F1DE405CF00BD7086 /* AcercaDeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB06E1DE405CF00BD7086 /* AcercaDeViewController.swift */; };
 		FBB7E0861DD78D4F00DEA129 /* AlarmasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB7E0851DD78D4F00DEA129 /* AlarmasTableViewController.swift */; };
 		FBB7E08C1DD7AC7F00DEA129 /* RegistrarAlarmaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB7E08B1DD7AC7F00DEA129 /* RegistrarAlarmaTableViewController.swift */; };
 		FBFAE0C71DE3B1FF00E70764 /* ConfiguracionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFAE0C61DE3B1FF00E70764 /* ConfiguracionTableViewController.swift */; };
@@ -37,6 +38,7 @@
 		E957012E1DB80C740051ACED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E95701301DB80C740051ACED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E95701381DB817050051ACED /* InformacionPersonalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InformacionPersonalTableViewController.swift; path = ../InformacionPersonalTableViewController.swift; sourceTree = "<group>"; };
+		E95BB06E1DE405CF00BD7086 /* AcercaDeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcercaDeViewController.swift; sourceTree = "<group>"; };
 		FBB7E0851DD78D4F00DEA129 /* AlarmasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmasTableViewController.swift; sourceTree = "<group>"; };
 		FBB7E08B1DD7AC7F00DEA129 /* RegistrarAlarmaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrarAlarmaTableViewController.swift; sourceTree = "<group>"; };
 		FBFAE0C61DE3B1FF00E70764 /* ConfiguracionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguracionTableViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				FBFAE0C61DE3B1FF00E70764 /* ConfiguracionTableViewController.swift */,
+				E95BB06E1DE405CF00BD7086 /* AcercaDeViewController.swift */,
 			);
 			name = Configuracion;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				E957012A1DB80C730051ACED /* MedicaT.xcdatamodeld in Sources */,
 				E95701391DB817050051ACED /* InformacionPersonalTableViewController.swift in Sources */,
 				FBB7E0861DD78D4F00DEA129 /* AlarmasTableViewController.swift in Sources */,
+				E95BB06F1DE405CF00BD7086 /* AcercaDeViewController.swift in Sources */,
 				E95701221DB80C730051ACED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
