@@ -634,7 +634,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="3bu-ng-yKy">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RQS-9y-IZI">
+                        <barButtonItem key="rightBarButtonItem" title="Guardar" id="RQS-9y-IZI">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="saveInformation:" destination="bfL-1T-V0a" id="zts-KZ-yCq"/>
@@ -885,7 +885,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="bfL-1T-V0a" kind="show" identifier="editarResponsale" id="mhC-t3-KdX"/>
+                                            <segue destination="bfL-1T-V0a" kind="show" identifier="editarResponsable" id="mhC-t3-KdX"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -917,7 +917,15 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bnY-id-rNo">
                                 <rect key="frame" x="16" y="139" width="343" height="336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">MedicaT ha sido desarrollado por estudiantes del Tecnológico de Monterrey durante el semestre Agosto Diciembre de 2016, como parte del curso Desarrollo de Aplicaciones para Dispositivos Móviles y asesorados por la maestra Yolanda Martínez Treviño.Desarrolladores:Alan Gustavo Valdez CascajaresRegina GallardoArmando Cons RoblesMedicaT se distribuye como está de manera gratuita y se prohíbe su distribución y uso con fines de lucro.</string>
+                                <string key="text">MedicaT ha sido desarrollado por estudiantes del Tecnológico de Monterrey durante el semestre Agosto Diciembre de 2016, como parte del curso Desarrollo de Aplicaciones para Dispositivos Móviles y asesorados por la maestra Yolanda Martínez Treviño.
+
+Desarrolladores:
+Alan Gustavo Valdez Cascajares
+Regina Gallardo
+Armando Cons Robles
+
+MedicaT se distribuye como está de manera gratuita y se prohíbe su distribución y uso con fines de lucro.
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -1183,8 +1191,8 @@
         <image name="pildora" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Cm-US-o2Y"/>
-        <segue reference="IG0-Qa-EX1"/>
         <segue reference="Q3u-NY-jKH"/>
+        <segue reference="mhC-t3-KdX"/>
+        <segue reference="6Cm-US-o2Y"/>
     </inferredMetricsTieBreakers>
 </document>
