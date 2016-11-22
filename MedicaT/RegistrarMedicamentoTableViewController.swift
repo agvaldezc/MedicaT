@@ -51,7 +51,7 @@ class RegistrarMedicamentoTableViewController: UITableViewController, UIPickerVi
             
             notasTextView.text = medicamento?.value(forKey: "notas") as! String
             
-            tipoMedidaField.text = medicamento?.value(forKey: "tipoMedida") as! String
+            tipoMedidaField.text = (medicamento?.value(forKey: "tipoMedida") as! String)
         }
     }
     
@@ -184,10 +184,10 @@ class RegistrarMedicamentoTableViewController: UITableViewController, UIPickerVi
         accessoryButton.tintColor = UIColor.white
         
         accessoryView.barStyle = .default
-        accessoryView.backgroundColor = UIColor.darkGray
+        accessoryView.backgroundColor = UIColor(red: (110/255.0) as CGFloat, green: (171/255) as CGFloat, blue: (247/255) as CGFloat, alpha: 1.0 as CGFloat)
         accessoryView.items = items
         accessoryView.isTranslucent = false
-        accessoryView.barTintColor = UIColor.darkGray
+        accessoryView.barTintColor = UIColor(red: (110/255.0) as CGFloat, green: (171/255) as CGFloat, blue: (247/255) as CGFloat, alpha: 1.0 as CGFloat)
         accessoryView.isUserInteractionEnabled = true
         accessoryView.sizeToFit()
         

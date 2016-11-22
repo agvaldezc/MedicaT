@@ -54,9 +54,7 @@ class AlarmasTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "alarmaCell", for: indexPath)
         
          let alarma = alarmas![indexPath.row]
-       
-        debugPrint(alarmas)
-        debugPrint(indexPath.row)
+      
         let presentacion = alarma.value(forKey: "presentacion") as! String
         let fecha = alarma.value(forKey: "fecha") as! Date
         
@@ -81,7 +79,14 @@ class AlarmasTableViewController: UITableViewController {
         if presentacion == "Pomada" {
             cell.imageView?.image = UIImage(named: "crema")
         }
-  
+        
+        if presentacion == "Jarabe" || presentacion == "Emulsión" {
+            cell.imageView?.image = UIImage(named: "jarabe")
+        }
+        
+        if presentacion == "Aerosol" {
+            cell.imageView?.image = UIImage(named: "aerosol")
+        }
     
         // Configure the cell...
 
@@ -109,6 +114,9 @@ class AlarmasTableViewController: UITableViewController {
     func deleteAlarma(alarma: NSManagedObject) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
+        let id = alarma.value(forKey: "id") as! String
+      
+        cancelNotification(id: id)
         
         managedContext.delete(alarma)
         
@@ -121,6 +129,21 @@ class AlarmasTableViewController: UITableViewController {
         tableView.reloadData()
         
     }
+  
+  func cancelNotification(id: String){
+    
+    let app:UIApplication = UIApplication.shared
+    
+    for oneEvent in app.scheduledLocalNotifications! {
+      let notification = oneEvent as UILocalNotification
+      if notification.userInfo?["id"] as! String == id {
+        //Cancelling local notification
+        app.cancelLocalNotification(notification)
+        break;
+      }
+    }
+    
+  }
 
 
     /*

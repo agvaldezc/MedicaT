@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import UserNotifications
+import AVFoundation
 
 class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
@@ -44,19 +46,29 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         getTableData()
         prepareDataSources()
+        prepareAccesoryViews()
         
         if accion == "editar" {
-           
             let duracionAux = alarma!.value(forKey: "duracion")
+            
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "H:mm a"
-            let horainicioAux =  alarma!.value(forKey: "fecha")
-            horaInicioField.text = dateFormatter.string(from: horainicioAux as! Date)
+            
+            let frecuenciaString = alarma?.value(forKey: "frecuencia") as! String
+            let frecuencia = Double(frecuenciaString)
+            
+            let horainicio =  alarma!.value(forKey: "fecha") as! Date
+            horaInicioField.text = dateFormatter.string(from: horainicio)
             medicamentoField.text = (alarma?.value(forKey: "nombre") as! String)
             dosisField.text = "\(alarma?.value(forKey: "dosis") as! Float)"
             duracionField.text = String(describing: duracionAux!)
             horasField.text = (alarma?.value(forKey: "frecuencia") as! String)
             presentacionAnt = alarma?.value(forKey: "presentacion") as! String
+            
+            let horaNueva = horainicio.addingTimeInterval(60.0*60.0*frecuencia!)
+            print("hora nueva: \(horaNueva)")
+            
+            print(dateFormatter.string(from: horaNueva))
         }
     }
 
@@ -72,6 +84,8 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         let managedContext = appDelegate.persistentContainer.viewContext
     
         let fecha = datePicker.date
+        _ = fecha.addingTimeInterval(60*60 * -6)
+      
         let frecuencia = horasField.text!
         let nombre = medicamentoField.text!
         //debugPrint(medicamentoSeleccionado.value(forKey: "presentacion"))
@@ -82,7 +96,11 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
     
         let duracion = Int(duracionField.text!)
         let dosis = Float(dosisField.text!)
-    
+        
+        let id = "\(nombre),\(fecha),\(frecuencia),\(duracion!),\(dosis!)"
+        let alertasTotales = (24/Int(frecuencia)!) * duracion!
+        let siguienteFecha = fecha.addingTimeInterval(60*60*Double(frecuencia)!)
+        
     if accion == "crear" {
         let entity = NSEntityDescription.entity(forEntityName: "Alarmas",in: managedContext)
         let alarmaNueva = NSManagedObject(entity: entity!,insertInto: managedContext)
@@ -93,19 +111,31 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         alarmaNueva.setValue(presentacion, forKey: "presentacion")
         alarmaNueva.setValue(duracion, forKey: "duracion")
         alarmaNueva.setValue(dosis, forKey: "dosis")
-    
+        
+        alarmaNueva.setValue(id, forKey: "id")
+        alarmaNueva.setValue(alertasTotales, forKey: "alertasTotales")
+        alarmaNueva.setValue(0, forKey: "alertasMostradas")
+        alarmaNueva.setValue(siguienteFecha, forKey: "siguienteAlerta")
+        
         do {
             try managedContext.save()
         } catch let error as NSError  {
             print("Could not save \(error), \(error.userInfo)")
         }
-        
+      
+        self.createLocalNotification(firedate: siguienteFecha as NSDate, medicamento: nombre, id: id)
+      
         performSegue(withIdentifier: "unwindAlarmas", sender: self)
     }
     else {
         if( presentacion != "")
         {alarma?.setValue(presentacion, forKey: "presentacion")}
         else{
+          
+          let antiguoId = alarma?.value(forKey: "id")
+          
+          cancelNotification(id: antiguoId as! String)
+          
         alarma?.setValue(presentacionAnt, forKey: "presentacion")
         }
         alarma?.setValue(frecuencia, forKey: "frecuencia")
@@ -114,13 +144,19 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         
         alarma?.setValue(duracion, forKey: "duracion")
         alarma?.setValue(dosis, forKey: "dosis")
+        alarma?.setValue(id, forKey: "id")
+        alarma?.setValue(alertasTotales, forKey: "alertasTotales")
+        alarma?.setValue(0, forKey: "alertasMostradas")
+        alarma?.setValue(siguienteFecha, forKey: "siguienteAlerta")
         
         do {
             try managedContext.save()
             }   catch let error as NSError  {
                 print("Could not save \(error), \(error.userInfo)")
                 }
-        
+      
+        self.createLocalNotification(firedate: siguienteFecha as NSDate, medicamento: nombre, id: id)
+      
         performSegue(withIdentifier: "unwindAlarmas", sender: self)
     
         }
@@ -130,11 +166,59 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         
         present(alert, animated: true, completion: nil)
-
-    
     }
    
     }
+  
+  func createLocalNotification(firedate: NSDate, medicamento: String, id: String)
+  {
+    let localNotification = UNMutableNotificationContent()
+    
+    // create a sound ID, in this case its the tweet sound.
+    let systemSoundID: SystemSoundID = 1016
+    
+    localNotification.categoryIdentifier = "CATEGORY"
+    localNotification.title = "Recordatorio"
+    
+    localNotification.userInfo = [
+      "message" : "tienes una notificacion",
+      "id" : id,
+      "medicamento" : medicamento
+    ]
+    
+    localNotification.sound = UNNotificationSound.default()
+    localNotification.body = "es hora de tomar tu medicamento: \(medicamento)"
+    
+    let timeInterval = firedate.timeIntervalSince(Date())
+    
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
+    
+    print(timeInterval)
+    
+    let request = UNNotificationRequest(identifier: id, content: localNotification, trigger: trigger)
+    
+    UNUserNotificationCenter.current().add(request) {(error) in
+      if let error = error {
+        print("Uh oh! We had an error: \(error)")
+      }
+    }
+    
+  }
+  
+  func cancelNotification(id: String){
+    
+    let app:UIApplication = UIApplication.shared
+    
+    for oneEvent in app.scheduledLocalNotifications! {
+      let notification = oneEvent as UILocalNotification
+      if notification.userInfo?["id"] as! String == id {
+        //Cancelling local notification
+        app.cancelLocalNotification(notification)
+        break;
+      }
+    }
+    
+  }
 
     // MARK: - Table view data source
 
@@ -261,7 +345,34 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         horaInicioField.text = dateFormatter.string(from: sender.date)
         
     }
+  
+  func prepareAccesoryViews() {
     
+    let accessoryView = UIToolbar()
+    
+    let accessoryButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
+    let accessorySpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+    
+    let items = [accessorySpace, accessoryButton]
+    
+    accessoryButton.tintColor = UIColor.white
+    
+    accessoryView.barStyle = .default
+    accessoryView.backgroundColor = UIColor(red: (110/255.0) as CGFloat, green: (171/255) as CGFloat, blue: (247/255) as CGFloat, alpha: 1.0 as CGFloat)
+    accessoryView.items = items
+    accessoryView.isTranslucent = false
+    accessoryView.barTintColor = UIColor(red: (110/255.0) as CGFloat, green: (171/255) as CGFloat, blue: (247/255) as CGFloat, alpha: 1.0 as CGFloat)
+    accessoryView.isUserInteractionEnabled = true
+    accessoryView.sizeToFit()
+    
+    medicamentoField.inputAccessoryView = accessoryView
+    dosisField.inputAccessoryView = accessoryView
+    horasField.inputAccessoryView = accessoryView
+    horaInicioField.inputAccessoryView = accessoryView
+    duracionField.inputAccessoryView = accessoryView
+  }
+
+  
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

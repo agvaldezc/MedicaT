@@ -31,6 +31,9 @@ class InformacionPersonalTableViewController: UITableViewController {
         
         navigationItem.title = rol
         navigationItem.titleView?.tintColor = UIColor.white
+        prepareAccesoryViews()
+        
+        profileImage.layer.cornerRadius = profileImage.frame.width / 2
         
         switch rol {
         case "Paciente":
@@ -135,7 +138,35 @@ class InformacionPersonalTableViewController: UITableViewController {
             
         }
     }
+  
+  func prepareAccesoryViews() {
     
+    let accessoryView = UIToolbar()
+    
+    let accessoryButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
+    let accessorySpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+    
+    let items = [accessorySpace, accessoryButton]
+    
+    accessoryButton.tintColor = UIColor.white
+    
+    accessoryView.barStyle = .default
+    accessoryView.backgroundColor = UIColor(red: (110/255.0) as CGFloat, green: (171/255) as CGFloat, blue: (247/255) as CGFloat, alpha: 1.0 as CGFloat)
+    accessoryView.items = items
+    accessoryView.isTranslucent = false
+    accessoryView.barTintColor = UIColor(red: (110/255.0) as CGFloat, green: (171/255) as CGFloat, blue: (247/255) as CGFloat, alpha: 1.0 as CGFloat)
+    accessoryView.isUserInteractionEnabled = true
+    accessoryView.sizeToFit()
+    
+    nombreField.inputAccessoryView = accessoryView
+    telefonoField.inputAccessoryView = accessoryView
+    emailField.inputAccessoryView = accessoryView
+  }
+  
+  func dismissKeyboard() {
+    view.endEditing(true)
+  }
+  
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

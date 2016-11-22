@@ -19,6 +19,8 @@
 		E95701391DB817050051ACED /* InformacionPersonalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95701381DB817050051ACED /* InformacionPersonalTableViewController.swift */; };
 		FBB7E0861DD78D4F00DEA129 /* AlarmasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB7E0851DD78D4F00DEA129 /* AlarmasTableViewController.swift */; };
 		FBB7E08C1DD7AC7F00DEA129 /* RegistrarAlarmaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB7E08B1DD7AC7F00DEA129 /* RegistrarAlarmaTableViewController.swift */; };
+		FBFAE0C71DE3B1FF00E70764 /* ConfiguracionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFAE0C61DE3B1FF00E70764 /* ConfiguracionTableViewController.swift */; };
+		FBFAE0C91DE3B20700E70764 /* HistorialTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFAE0C81DE3B20700E70764 /* HistorialTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		E95701381DB817050051ACED /* InformacionPersonalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InformacionPersonalTableViewController.swift; path = ../InformacionPersonalTableViewController.swift; sourceTree = "<group>"; };
 		FBB7E0851DD78D4F00DEA129 /* AlarmasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmasTableViewController.swift; sourceTree = "<group>"; };
 		FBB7E08B1DD7AC7F00DEA129 /* RegistrarAlarmaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrarAlarmaTableViewController.swift; sourceTree = "<group>"; };
+		FBFAE0C61DE3B1FF00E70764 /* ConfiguracionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguracionTableViewController.swift; sourceTree = "<group>"; };
+		FBFAE0C81DE3B20700E70764 /* HistorialTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorialTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 		E95701201DB80C730051ACED /* MedicaT */ = {
 			isa = PBXGroup;
 			children = (
+				FBFAE0C51DE3B1E300E70764 /* Historial */,
+				FBFAE0C41DE3B1D800E70764 /* Configuracion */,
 				E912A90A1DCA74C2007A9E0D /* Información Personal */,
 				E912A90B1DCA74D0007A9E0D /* Medicamentos */,
 				FBB7E0841DD78CEC00DEA129 /* Alarmas */,
@@ -108,6 +114,22 @@
 				FBB7E08B1DD7AC7F00DEA129 /* RegistrarAlarmaTableViewController.swift */,
 			);
 			name = Alarmas;
+			sourceTree = "<group>";
+		};
+		FBFAE0C41DE3B1D800E70764 /* Configuracion */ = {
+			isa = PBXGroup;
+			children = (
+				FBFAE0C61DE3B1FF00E70764 /* ConfiguracionTableViewController.swift */,
+			);
+			name = Configuracion;
+			sourceTree = "<group>";
+		};
+		FBFAE0C51DE3B1E300E70764 /* Historial */ = {
+			isa = PBXGroup;
+			children = (
+				FBFAE0C81DE3B20700E70764 /* HistorialTableViewController.swift */,
+			);
+			name = Historial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +159,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = ITESM;
 				TargetAttributes = {
 					E957011D1DB80C730051ACED = {
@@ -183,8 +205,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E912A9151DCA8273007A9E0D /* RegistrarMedicamentoTableViewController.swift in Sources */,
+				FBFAE0C71DE3B1FF00E70764 /* ConfiguracionTableViewController.swift in Sources */,
 				E912A9091DCA74AC007A9E0D /* MedicamentosTableViewController.swift in Sources */,
 				E912A9111DCA779B007A9E0D /* MedicamentosPlistManager.swift in Sources */,
+				FBFAE0C91DE3B20700E70764 /* HistorialTableViewController.swift in Sources */,
 				FBB7E08C1DD7AC7F00DEA129 /* RegistrarAlarmaTableViewController.swift in Sources */,
 				E95701241DB80C730051ACED /* ViewController.swift in Sources */,
 				E957012A1DB80C730051ACED /* MedicaT.xcdatamodeld in Sources */,
@@ -234,6 +258,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -283,6 +308,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

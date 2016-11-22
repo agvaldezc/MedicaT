@@ -74,6 +74,15 @@ class MedicamentosTableViewController: UITableViewController {
         if presentacion == "Pomada" {
             cell.imageView?.image = UIImage(named: "crema")
         }
+        
+        if presentacion == "Jarabe" || presentacion == "Emulsión" {
+            cell.imageView?.image = UIImage(named: "jarabe")
+        }
+        
+        if presentacion == "Aerosol" {
+            cell.imageView?.image = UIImage(named: "aerosol")
+        }
+        
         return cell
     }
     

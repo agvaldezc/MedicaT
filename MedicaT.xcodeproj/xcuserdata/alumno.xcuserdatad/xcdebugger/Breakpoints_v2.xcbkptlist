@@ -15,8 +15,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
             endingLineNumber = "87"
-            landmarkName = "RegistrarMedicamentoTableViewController"
-            landmarkType = "3">
+            landmarkName = "pickerView(_:titleForRow:forComponent:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "79"
             endingLineNumber = "79"
-            landmarkName = "pickerView(_:titleForRow:forComponent:)"
+            landmarkName = "pickerView(_:numberOfRowsInComponent:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
             endingLineNumber = "71"
-            landmarkName = "pickerView(_:numberOfRowsInComponent:)"
+            landmarkName = "numberOfComponents(in:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -260,11 +260,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/AlarmasTableViewController.swift"
-            timestampString = "501364133.786198"
+            timestampString = "501456305.289744"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "getTableData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -292,11 +292,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
-            timestampString = "500686114.734997"
+            timestampString = "501474105.319965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "RegistrarAlarmaTableViewController"
             landmarkType = "3">
             <Locations>
@@ -375,7 +375,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "173"
             endingLineNumber = "173"
-            landmarkName = "unwindMedicamentos(segue:)"
+            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -402,12 +402,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
-            timestampString = "501440779.999399"
+            timestampString = "501474693.460512"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "guardarAlarmas(sender:)"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -418,11 +418,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
-            timestampString = "501440779.999399"
+            timestampString = "501474105.319965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -434,11 +434,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/AlarmasTableViewController.swift"
-            timestampString = "501364133.786198"
+            timestampString = "501456305.289744"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "deleteAlarma(alarma:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -450,11 +450,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
-            timestampString = "501356470.959611"
+            timestampString = "501474105.319965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "RegistrarAlarmaTableViewController"
             landmarkType = "3">
             <Locations>
@@ -685,7 +685,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "95"
             endingLineNumber = "95"
-            landmarkName = "deleteMedicamento(medicamento:)"
+            landmarkName = "getTableData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -717,7 +717,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "160"
             endingLineNumber = "160"
-            landmarkName = "prepareAccesoryViews()"
+            landmarkName = "guardarMedicamento(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -733,7 +733,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"
             endingLineNumber = "82"
-            landmarkName = "pickerView(_:didSelectRow:inComponent:)"
+            landmarkName = "pickerView(_:numberOfRowsInComponent:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -749,7 +749,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
             endingLineNumber = "74"
-            landmarkName = "pickerView(_:titleForRow:forComponent:)"
+            landmarkName = "pickerView(_:numberOfRowsInComponent:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -765,7 +765,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
             endingLineNumber = "66"
-            landmarkName = "pickerView(_:numberOfRowsInComponent:)"
+            landmarkName = "numberOfSections(in:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -781,8 +781,70 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
             endingLineNumber = "24"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            landmarkName = "RegistrarMedicamentoTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarMedicamentoTableViewController.presentaciones.getter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarMedicamentoTableViewController.swift"
+                  timestampString = "501455291.83197"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarMedicamentoTableViewController.init (style : __C.UITableViewStyle) -&gt; MedicaT.RegistrarMedicamentoTableViewController"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarMedicamentoTableViewController.swift"
+                  timestampString = "501455291.833632"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "440">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarMedicamentoTableViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MedicaT.RegistrarMedicamentoTableViewController"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarMedicamentoTableViewController.swift"
+                  timestampString = "501455291.835345"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "549">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MedicaT.RegistrarMedicamentoTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MedicaT.RegistrarMedicamentoTableViewController&gt;"
+                  moduleName = "MedicaT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarMedicamentoTableViewController.swift"
+                  timestampString = "501455291.836816"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "440">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -792,11 +854,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/AlarmasTableViewController.swift"
-            timestampString = "501364133.786198"
+            timestampString = "501456305.289744"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -820,31 +882,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MedicaT/AlarmasTableViewController.swift"
-            timestampString = "501364133.786198"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
-            timestampString = "501440779.999399"
+            timestampString = "501474693.460512"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -856,13 +902,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
-            timestampString = "501440779.999399"
+            timestampString = "501474693.460512"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "guardarAlarmas(sender:)"
-            landmarkType = "7">
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "RegistrarAlarmaTableViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -888,11 +934,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
-            timestampString = "501440779.999399"
+            timestampString = "501474693.460512"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "guardarAlarmas(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -904,11 +950,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
-            timestampString = "501440779.999399"
+            timestampString = "501474693.460512"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "guardarAlarmas(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -920,11 +966,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
-            timestampString = "501440779.999399"
+            timestampString = "501474693.460512"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
             landmarkName = "pickerView(_:didSelectRow:inComponent:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -941,7 +987,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
             endingLineNumber = "88"
-            landmarkName = "guardarMedicamento(_:)"
+            landmarkName = "pickerView(_:titleForRow:forComponent:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -952,11 +998,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
-            timestampString = "501440779.999399"
+            timestampString = "501474693.460512"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
             landmarkName = "prepareDataSources()"
             landmarkType = "7">
          </BreakpointContent>
@@ -968,11 +1014,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
-            timestampString = "501440779.999399"
+            timestampString = "501474105.319965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -984,11 +1030,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedicaT/RegistrarAlarmaTableViewController.swift"
-            timestampString = "501440779.999399"
+            timestampString = "501474693.460512"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -1000,12 +1046,12 @@
                   moduleName = "MedicaT"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
-                  timestampString = "501378676.426101"
+                  timestampString = "501455291.872736"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "6739">
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "3292">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1015,14 +1061,30 @@
                   moduleName = "MedicaT"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alumno/Desktop/MedicaT/MedicaT/RegistrarAlarmaTableViewController.swift"
-                  timestampString = "501378676.427168"
+                  timestampString = "501455291.874384"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "7597">
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "9982">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedicaT/AppDelegate.swift"
+            timestampString = "501468704.624653"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
