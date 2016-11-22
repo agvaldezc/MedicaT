@@ -39,8 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     //let actionTest = UNNotificationAction(identifier: "TEST_ACTION", title: "TEST", options: [])
     
     let center = UNUserNotificationCenter.current()
-    center.removeAllDeliveredNotifications()
-    center.removeAllPendingNotificationRequests()
     let options: UNAuthorizationOptions = [.alert, .sound]
     
     let notificationsCategory = UNNotificationCategory(identifier: "CATEGORY", actions: [actionOk, actionAhoraNo, actionDespues], intentIdentifiers: [], options: [.customDismissAction])
