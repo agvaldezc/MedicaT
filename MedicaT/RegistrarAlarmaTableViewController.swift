@@ -45,6 +45,7 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         getTableData()
+        
         prepareDataSources()
         prepareAccesoryViews()
         
@@ -243,7 +244,19 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
             print("Could not fetch \(error), \(error.userInfo)")
         }
         
-        tableView.reloadData()
+        if medicamentos.count == 0 {
+            let alert = UIAlertController(title: "No hay medicamentos", message: "Para crear una alarma se tiene que tener registrado al menos un medicamento.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (UIAlertAction) in
+                self.navigationController?.popToRootViewController(animated: true)
+            }))
+            
+            present(alert, animated: true, completion: nil)
+            
+        } else {
+        
+            tableView.reloadData()
+        }
     }
     
     func prepareDataSources() {
