@@ -25,6 +25,8 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
     var newPresentacion = false
     
     
+    
+    
     @IBOutlet weak var medicamentoField: UITextField!
     @IBOutlet weak var dosisField: UITextField!
     @IBOutlet weak var horasField: UITextField!
@@ -45,6 +47,8 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         getTableData()
+        
+        navigationItem.titleView?.tintColor = UIColor.white
         
         prepareDataSources()
         prepareAccesoryViews()
@@ -248,7 +252,7 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
             let alert = UIAlertController(title: "No hay medicamentos", message: "Para crear una alarma se tiene que tener registrado al menos un medicamento.", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (UIAlertAction) in
-                self.navigationController?.popToRootViewController(animated: true)
+                _ = self.navigationController?.popToRootViewController(animated: true)
             }))
             
             present(alert, animated: true, completion: nil)
@@ -380,6 +384,8 @@ class RegistrarAlarmaTableViewController: UITableViewController, UIPickerViewDel
     horasField.inputAccessoryView = accessoryView
     horaInicioField.inputAccessoryView = accessoryView
     duracionField.inputAccessoryView = accessoryView
+    
+    
   }
 
   
