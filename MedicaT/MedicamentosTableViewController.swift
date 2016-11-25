@@ -28,6 +28,7 @@ class MedicamentosTableViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         
         tableView.tableFooterView?.backgroundColor = UIColor.red
+        navigationItem.titleView?.tintColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning() {
@@ -133,9 +134,18 @@ class MedicamentosTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            deleteMedicamento(medicamento: (medicamentos?[indexPath.row])!)
-            medicamentos?.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            let alert = UIAlertController(title: "Alerta", message: "¿Deseas borrar este registro del sistema?", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
+                
+            alert.addAction(UIAlertAction(title: "Borrar", style: .destructive, handler: { (UIAlertAction) in
+                self.deleteMedicamento(medicamento: (self.medicamentos?[indexPath.row])!)
+                self.medicamentos?.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }))
+            
+            present(alert, animated: true, completion: nil)
+
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    

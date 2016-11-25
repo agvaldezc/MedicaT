@@ -39,6 +39,8 @@ class RegistrarMedicamentoTableViewController: UITableViewController, UIPickerVi
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
         
+        navigationItem.titleView?.tintColor = UIColor.white
+        
         tipoMedidaField.text = "ml"
         
         preparePickerViews()
