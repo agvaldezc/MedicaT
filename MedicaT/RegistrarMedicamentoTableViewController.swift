@@ -218,6 +218,10 @@ class RegistrarMedicamentoTableViewController: UITableViewController, UIPickerVi
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == presentacionField {
             updatePickerContent()
+            
+            if presentacionField.text == "" {
+                presentacionField.text = presentaciones[0]
+            }
         }
         
         if textField == tipoMedidaField {

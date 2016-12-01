@@ -227,7 +227,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     localNotification.sound = UNNotificationSound.default()
     
-    localNotification.body = "es hora de tomar tu medicamento: \(notification.request.content.userInfo["medicamento"])"
+    localNotification.body = "Es hora de tomar tu medicamento: \(notification.request.content.userInfo["medicamento"])"
     
     let timeInterval = firedate.timeIntervalSince(Date())
     
